@@ -1,7 +1,8 @@
-import streamlit as st, pandas as pd, numpy as np
+import pandas as pd
+import streamlit as st
 from sklearn.linear_model import RidgeCV
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
+from sklearn.model_selection import train_test_split
 from src.app_utils import engineer_features
 
 st.set_page_config(page_title='NFL QB Analyzer')
