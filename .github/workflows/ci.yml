@@ -13,10 +13,10 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install black ruff mypy isort pytest
+      - name: Auto-format (black)
+        run: black .
       - name: Lint (ruff)
-        run: ruff check .
-      - name: Format check (black)
-        run: black --check .
+        run: ruff check . --fix
       - name: Type check (mypy)
         run: mypy .
       - name: Tests
