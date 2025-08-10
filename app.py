@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
 from src.app_utils import engineer_features
 
-st.set_page_config(page_title='NFL QB Analyzer')
+st.set_page_config(page_title="NFL QB Analyzer")
 
 df = pd.read_csv("data/qb_sample.csv")
 df = engineer_features(df)
@@ -29,6 +29,7 @@ if len(df) > 10:
     st.write(f"Model R²: **{r2:.3f}**")
 else:
     model = RidgeCV(alphas=[1.0]).fit(X, y)
+
 ranked = df.copy()
 ranked["ModelScore"] = model.predict(X)
 st.title("NFL QB Performance Analyzer")
