@@ -1,3 +1,3 @@
-# NFL QB Analyzer (Polished)
+# NFL QB Analyzer
 
 Run: `streamlit run app.py`
